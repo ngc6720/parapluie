@@ -1,0 +1,114 @@
+:root {
+  --color-background: rgb(27, 27, 27);
+  --color-surface: rgb(38, 38, 38);
+  --color-text-a: rgb(195, 195, 195);
+  --color-text-b: rgb(155, 155, 155);
+  --color-line: rgb(70, 70, 70);
+  --color-translucid: rgba(0, 0, 0, 0.65);
+  --color-accent: rgb(135, 138, 230);
+  --color-accent-dark: rgb(34, 35, 52);
+  --color-error: rgb(224, 102, 96);
+  /* --color-accent: rgb(87, 186, 138);
+  --color-accent: rgb(102, 207, 191);
+  --color-accent: rgb(115, 203, 221);
+  --color-accent: rgb(115, 221, 196); */
+
+  --color-scrollbar-background: rgb(48, 48, 48);
+  --color-scrollbar: var(--color-line);
+
+  --padding-a: 2.5rem;
+  --padding-b: 0.5rem;
+  --padding-c: 1rem;
+
+  --border-radius: 4px;
+  /* --border-radius: 0; */
+
+  --font-size-s: 0.88rem;
+  --font-size-m: 1rem;
+  --font-size-l: 1.25rem;
+  --font-size-xl: 2rem;
+  --font-size-xxl: 3rem;
+
+  --transition-a: 40ms;
+  --transition-b: 90ms;
+
+  --icon-size: 24px;
+  --main-column-width: 56rem;
+  --sidebar-width: 14rem;
+  --header-size: 4rem;
+  --spinner-size: 2.75rem;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text-a);
+  font-family: Inter, "Arial", sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+}
+html {
+  scrollbar-color: var(--color-scrollbar) var(--color-background);
+}
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+  font-size: var(--font-size-m);
+  font-weight: 400;
+  color: var(--color-text-a);
+  margin: 0;
+}
+
+h1 {
+  font-size: var(--font-size-xxl);
+  margin-bottom: calc(var(--padding-a) * 2);
+  padding-bottom: calc(var(--padding-a));
+}
+
+h2 {
+  margin-bottom: calc(var(--padding-c));
+}
+
+h3 {
+}
+
+p {
+  margin: 2rem 0;
+}
+
+button,
+a {
+  background-color: var(--color-background);
+  border: none;
+  color: var(--color-text-b);
+  padding: 0.5rem;
+  font-size: var(--font-size-m);
+  transition: color var(--transition-a);
+  text-decoration: none;
+  user-select: none;
+  border-radius: var(--border-radius);
+}
+
+button:hover,
+a:hover {
+  color: var(--color-accent);
+  cursor: pointer;
+}
+button:active {
+  outline: 1px solid var(--color-accent);
+}
+input {
+  background-color: var(--color-background);
+  border: 1px solid var(--color-line);
+  border-radius: var(--border-radius);
+  color: var(--color-text-a);
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  caret-color: currentColor;
+}
