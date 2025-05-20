@@ -32,6 +32,7 @@ export const useWeatherStore = defineStore("weather", () => {
     name.value = newName;
   }
 
+  //todo: use zod instead
   const formatedData = computed((): WeatherData | null => {
     if (data.value === null) {
       return null;

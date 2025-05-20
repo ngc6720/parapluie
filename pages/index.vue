@@ -12,8 +12,8 @@ const searchResults = computed(() => geocodeStore.results.map(result => result.i
 
     <div>
         <h1>
-            Do i need my parapluie ?
-            <span>Do i need my umbrella ?</span>
+            Do i need a parapluie ?
+            <span>Do i need an umbrella ?</span>
         </h1>
         <h2>Search a city to find out</h2>
         <div id="pluie">

@@ -13,6 +13,7 @@ function hasData(unknownResult: any) {
     typeof longitude === "number"
   );
 }
+
 function makeDataObject(result: any, i: number): Result {
   const { name, country, latitude, longitude } = result;
   return {
@@ -45,6 +46,7 @@ export const useGeocodeStore = defineStore("geocode", () => {
   const results = computed((): Array<Result> => {
     if (!Array.isArray(data.value?.results)) return [];
 
+    //todo: use zod instead
     const results = data.value.results
       .map((result: any, i: number) =>
         hasData(result) ? makeDataObject(result, i) : null
